@@ -43,6 +43,10 @@ def main():
 			if a.collision(player):
 				print("Game Over!")
 				sys.exit()
+			for b in bullets:
+				if a.collision(b):
+					a.split()
+					b.kill()
 
 		pygame.Surface.fill(screen, (1,1,1))
 		
